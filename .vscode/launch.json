@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/스택,큐/다리를 지나는 트럭(문제2).js"
+            "program": "${workspaceFolder}/스택,큐/쇠막대기(문제4).js"
         }
     ]
 }
