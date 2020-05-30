@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/스택,큐/쇠막대기(문제4).js"
+            "program": "${workspaceFolder}/힙/디스크 컨트롤러(문제3).js"
         }
     ]
 }
