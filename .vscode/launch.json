@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/힙/이중우선순위큐(문제4).js"
+            "program": "${workspaceFolder}/정렬/H-Index(문제3).js"
         }
     ]
 }
