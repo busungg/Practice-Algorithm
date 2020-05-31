@@ -1,60 +1,81 @@
 function solution(citations) {
+    const result = [];
+    
     citations.sort((a, b) => {
         return a - b;
     });
 
-    //인용된 논문 개수
-    let h = citations.length, quotation;
+    /*
+        h번 인용된 논문이 h편 이상일 때
+    */
     const quotationArray = [];
+    while(citations.length !== 0) {
+        quotationArray.unshift(citations.pop());
 
-    for(let i = citations.length-1; i >= 0; i--) {
-
+        if(quotationArray[0] <= quotationArray.length) {
+            result.push(quotationArray[0]);
+        }
     }
 
-
+    /*
+        h번 인용된 논문이 h편 이상이 아닐 시
+    */
+    let h = quotationArray.length;
     while(h !== 0) {
-        quotation = citations[h - 1];
-
-        quotationArray.push([h, ])
-
-        h -= 1;
+        if(quotationArray.filter((value)=> { return value >= h }).length >= h) {
+            result.push(h);
+        }
+        h--;
     }
 
-    return quotationArray.length;
+    /*
+        모든 답변을 구한다음 그 중 가장 큰 수를 return; 
+     */
+    result.sort((a, b) => {
+        return b - a;
+    });
+
+    return result[0];
 }
 
-console.log(solution([3, 0, 6, 1, 5]));
-console.log(solution([0, 0, 0, 0, 0]), 5);
+console.log(solution([0]), 0);
+console.log(solution([1]), 1);
+console.log(solution([3, 0, 6, 1, 5]), 3);
+console.log(solution([0, 0, 0, 0, 0]), 0);
 console.log(solution([10, 1]), 1);
 console.log(solution([0, 1, 1, 1, 1, 3, 3, 4]), 3);
 console.log(solution([5,5,5,5]), 4);
 console.log(solution([5,5,5,5,5]), 5);
+console.log(solution([2,7,5]), 2);
+console.log(solution([22, 42]), 2);
+console.log(solution([20, 19, 18, 1]), 3);
 
 /*
  * 
-    * 문제 1.
-        네 편의 논문 인용횟수가 [9,9,8,7]이면 H-Index가 존재하지 않아요.
 
-        h = 9)
-        9번 이상 인용된 논문 2개
-        h = 8)
-        8번 이상 인용된 논문 3개
-        h = 7)
-        7번 이상 인용된 논문 4개
-        h < 7)
-        4번 이상 인용된 논문 4개 but 4번 이하 인용된 논문 없음
-
-        문제에 결함이 있습니다
-        
-
-    답변:
-        h=4로 '4'번 이상 인용된 논문이 4개 이상(4개)이고 4번 이하 인용된 논문이 4개 이하(0개)이므로 H-Index는 4가 맞습니다. 
-        논문이 0개라는것도 4개 이하는 맞으니까 성립하는 걸로 받아들였습니다
-
-
-    * 문제 2.
-        [22, 42] 라면
-
-    답변
-        2 편 중, 2번 이상 인용된 논문이 2편 이상이고 나머지 논문이 2번 이하 인용 되었다면 2가 이 과학자의 H-Index입니다.
+    * 문제 3.
+        tc: [22, 42] ret:2
+    
+    답변 
+        1. [20,19,18,1] 인용수가 18개 이상이어도 18편이 아니므로 
+            답이 1인 줄 알고 헤매다 3개이상 3편도 맞으므로 3입니다.
  */
+
+
+ /**
+  * 좋은 답변
+        function solution(citations) {
+            citations = citations.sort(sorting);
+            var i = 0;
+            while(i + 1 <= citations[i]){
+                i++;
+            }
+            return i;
+
+
+            function sorting(a, b){
+                return b - a;
+            }
+        }
+  * 
+  */
