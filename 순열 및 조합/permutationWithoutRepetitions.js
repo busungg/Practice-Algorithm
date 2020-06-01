@@ -3,7 +3,7 @@ const permutationWithoutRepetitions = (numbers) => {
     function recursive(subNumbers, subResult, result) {
         if(subNumbers.length === 1) {
             subResult.push(subNumbers[0]);
-            result[result.length] = parseInt(subResult.join(''));
+            result.add(parseInt(subResult.join('')));
             return;
         }
 
@@ -16,14 +16,15 @@ const permutationWithoutRepetitions = (numbers) => {
         }
     }
 
-    const result = [];
+    const result = new Set();
     let firstNum, copyNumbers;
     for(let i = 0, len = numbers.length; i< len; i++) {
         firstNum = numbers[i];
+        result.add(firstNum);
 
         copyNumbers = [...numbers];
         copyNumbers.splice(i, 1);
-        recursive(copyNumbers, [firstNum], result)
+        recursive(copyNumbers, [firstNum], result);
     }
 
     return result;
