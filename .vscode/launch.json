@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/카카오톡/자물쇠와 열쇠.js"
+            "program": "${workspaceFolder}/카카오톡/기둥과 보 설치.js"
         }
     ]
 }
