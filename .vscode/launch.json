@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/카카오톡/기둥과 보 설치.js"
+            "program": "${workspaceFolder}/카카오톡/오픈채팅방.js"
         }
     ]
 }
