@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/카카오톡/오픈채팅방.js"
+            "program": "${workspaceFolder}/카카오톡/실패율.js"
         }
     ]
 }
