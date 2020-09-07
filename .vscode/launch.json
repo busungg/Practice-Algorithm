@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/카카오톡/실패율.js"
+            "program": "${workspaceFolder}/카카오톡/무지의 먹방 라이브.js"
         }
     ]
 }
