@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/자료구조/트리/집합트리.js"
+            "program": "${workspaceFolder}/알고리즘/정렬/버블 정렬.js"
         }
     ]
 }
