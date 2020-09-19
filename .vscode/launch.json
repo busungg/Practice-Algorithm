@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/자료구조/스택/postfix.js"
+            "program": "${workspaceFolder}/자료구조/트리/수식트리.js"
         }
     ]
 }
