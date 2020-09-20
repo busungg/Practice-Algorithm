@@ -11,7 +11,12 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/알고리즘/정렬/버블 정렬.js"
+            "program": "${workspaceFolder}/시험/네이버 Apollo/문제3.js"
         }
     ]
 }
+
+//"${workspaceFolder}/알고리즘/시험/네이버 Apollo/문제1.js"
+//"${workspaceFolder}/알고리즘/시험/네이버 Apollo/문제2.js"
+//"${workspaceFolder}/알고리즘/시험/네이버 Apollo/문제3.js"
+//"${workspaceFolder}/알고리즘/시험/네이버 Apollo/문제4.js"
