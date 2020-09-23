@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/시험/네이버 Apollo/문제3.js"
+            "program": "${workspaceFolder}/알고리즘/탐색/이진 탐색.js"
         }
     ]
 }
